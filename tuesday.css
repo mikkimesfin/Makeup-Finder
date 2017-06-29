@@ -19,6 +19,16 @@
 		vertical-align: baseline;
 	}
 
+nav {
+	background-color: #254E70;
+}
+
+button {
+	background-color: #37718E !important
+}
+body {
+	background-color: #8EE3EF !important
+}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -153,7 +163,7 @@
 	}
 
 		a:hover {
-			color: #FFF;
+			color: #8EE3EF;
 			border: none;
 		}
 

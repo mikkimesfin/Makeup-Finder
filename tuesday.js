@@ -54,9 +54,11 @@ function getMakeup(event) {
   }
   let type = document.getElementsByTagName('input')[0].value
   let brand =$("#brandDropdown option:selected").val()
+  let lessThan = $("#priceDropdown option:selected").val()
   console.log(brand)
   let offset = (currentPage * limit) - limit
   fetch(proxy + baseURL + `?product_type=${type}` + `&brand=${brand}`
+    + `&price_less_than=${lessThan}`
     + `&limit=30` + `&page=${currentPage}` + `&offset=${offset}`
   )
     .then(data => data.json()) //turns it into json

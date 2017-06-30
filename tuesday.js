@@ -85,7 +85,7 @@ function createCard(makeup) {
     if (makeup.price === null) {
       var price = 'Not Available';
     } else {
-      var price = makeup.price;
+      var price = '$' + makeup.price;
     }
     if (makeup.brand === null) {
       var brand = 'Not Available';
@@ -106,7 +106,7 @@ function createCard(makeup) {
         '<p><a href="' + makeup.product_link + '">Product Link</a></p>' +
       '</div>' +
     '<div class="card-reveal">' +
-      '<span class="card-title grey-text text-darken-4"> ' + 'Price: $' + price + '<br>' + 'Review: ' + rating + '<br>' + 'Brand: ' + brand + '<i class="material-icons right">close</i></span>' +
+      '<span class="card-title grey-text text-darken-4"> ' + 'Price: ' + price + '<br>' + 'Review: ' + rating + '<br>' + 'Brand: ' + brand + '<i class="material-icons right">close</i></span>' +
       '<p>' + '<br>'+ 'Description: ' + makeup.description + '<br>' +  '</p>' + '<p><a href="' + makeup.product_link + '">Product Link</a></p>'
       '</div></div>'
 

@@ -80,191 +80,39 @@ function createCard(makeup) {
     } else {
       var rating = makeup.rating + '/5';
     }
-
-//     $(".main-content").append(
-      // '<div class="col s6 m4">' +
-      // '<div class="card large">' +
-      //   '<div class="card-image waves-effect waves-block waves-light">' +
-      //     '<img class="activator" src="' + data[i].image_link + '">' +
-      //   '</div>' +
-      //   '<div class="card-content">' +
-      //     '<span class="card-title activator grey-text text-darken-4">' + makeup[i].name + '<i class="material-icons right">more_vert</i></span>' +
-      //     '<p><a href="#">' +data[i].website_link +'</a></p>' +
-      //   '</div>' +
-      // '<div class="card-reveal">' +
-      //   '<span class="card-title grey-text text-darken-4"> ' + '$' + makeup[i].price + '<br>' + 'review: ' + rating + '/5' + '<br>' + data[i].brand + '<i class="material-icons right">close</i></span>' +
-      //   '<p>' + '<br>'+ 'Description: ' + makeup[i].description + '<br>' +  '</p>' +
-      //   '</div></div>' +
-      // '</div>')
-// }
-//   }
+    if (makeup.price === null) {
+      var price = 'Not Available';
+    } else {
+      var price = makeup.price;
+    }
+    if (makeup.brand === null) {
+      var brand = 'Not Available';
+    } else {
+      var brand = makeup.brand;
+    }
   let div = document.createElement('div')
   div.classList.add('col', 's12', 'm4')
   let content = document.querySelector('.main-content')
   div.innerHTML =
-    // `<div class = "card">
-    //   <img src="${makeup.image_link}">
-    //   <div class ="card-section">
-    //     <p>${makeup.name}</p>
-    //   </div>
-    // </div>`
 
-    // '<div class="col s6 m4">' +
     '<div class="card large">' +
       '<div class="card-image waves-effect waves-block waves-light">' +
         '<img class="activator" src="' + makeup.image_link + '">' +
       '</div>' +
       '<div class="card-content">' +
-        '<span class="card-title activator grey-text text-darken-4">' + makeup.name + '<i class="material-icons right">more_vert</i></span>' +
+        '<span class="card-title activator grey-text text-darken-4">' + makeup.name + '<i class="material-icons hide">more_vert</i></span>' +
         '<p><a href="' + makeup.product_link + '">Product Link</a></p>' +
       '</div>' +
     '<div class="card-reveal">' +
-      '<span class="card-title grey-text text-darken-4"> ' + 'Price: $' + makeup.price + '<br>' + 'Review: ' + rating + '<br>' + 'Brand: ' + makeup.brand + '<i class="material-icons right">close</i></span>' +
-      '<p>' + '<br>'+ 'Description: ' + makeup.description + '<br>' +  '</p>' +
+      '<span class="card-title grey-text text-darken-4"> ' + 'Price: $' + price + '<br>' + 'Review: ' + rating + '<br>' + 'Brand: ' + brand + '<i class="material-icons right">close</i></span>' +
+      '<p>' + '<br>'+ 'Description: ' + makeup.description + '<br>' +  '</p>' + '<p><a href="' + makeup.product_link + '">Product Link</a></p>'
       '</div></div>'
-    // '</div>'
+
 
   content.appendChild(div)
 
 }
 
-// $('#submit').click(function(event) {
-//   event.preventDefault();
-//   // var brand = $('#brand').val()
-//   var type = $('#product-type').val()
-//   url: typeURL + type
-// }).then(function(data) {
-//
-//   for (i = 0; i < data.length; i++) {
-//   console.log(data[i])
-//     if (data[i].rating === null) {
-//       var rating = 'Not Available';
-//     } else {
-//       var rating = data[i].rating;
-//     }
-//
-//     $(".main-content").append(
-//       '<div class="col s6 m4">' +
-//       '<div class="card large">' +
-//         '<div class="card-image waves-effect waves-block waves-light">' +
-//           '<img class="activator" src="' + data[i].image_link + '">' +
-//         '</div>' +
-//         '<div class="card-content">' +
-//           '<span class="card-title activator grey-text text-darken-4">' + data[i].name + '<i class="material-icons right">more_vert</i></span>' +
-//           '<p><a href="#">' + data[i].website_link +'</a></p>' +
-//         '</div>' +
-//       '<div class="card-reveal">' +
-//         '<span class="card-title grey-text text-darken-4"> ' + '$' + data[i].price + '<br>' + 'review: ' + rating + '/5' + '<br>' + data[i].brand + '<i class="material-icons right">close</i></span>' +
-//         '<p>' + '<br>'+ 'Description: ' + data[i].description + '<br>' +  '</p>' +
-//         '</div></div>' +
-//       '</div>')
-//   }
-// }
-// })
-// $('.save').click(function(event) {
-//   event.preventDefault()
-//   types: $(".types option:selected").val()
-//
-// $.get(typeURL, types)
-// .then(function(data) {
-//   $('save-status').text(data.message)
-//   $('.save-status').show().fadeIn(500).delay(2000).fadeOut(500)
-// })
-// .catch(function(e) {
-//   $('.save-status').text('Please Try Again').show().fadeIn(500).delay(2000).fadeOut(500)
-// })
-// })
-//
-// $('#submit').click(function(event) {
-//   event.preventDefault();
-//   // var brand = $('#brand').val()
-//   var type = $('#product-type').val()
-//   url: typeURL + type
-// //   url: baseURL + "brand=" + brand + "product_type=" + type
-// })
-// function getMakeup() {
-
-
-// $.ajax({
-//   method: "GET",
-//   // url: "https://cors-anywhere.herokuapp.com/http://makeup-api.herokuapp.com/api/v1/products.json"
-//   url: "http://makeup-api.herokuapp.com/api/v1/products.json"
-// }).then(function(data) {
-//
-// for (i = 0; i < data.length-1; i++) {
-//   if (data[i].rating === null) {
-//     var rating = 'Not Available';
-//   } else {
-//     var rating = data[i].rating;
-//   }
-//
-//   $(".main-content").append(
-//     '<div class="col s6 m4">' +
-//     '<div class="card large">' +
-//       '<div class="card-image waves-effect waves-block waves-light">' +
-//         '<img class="activator" src="' + data[i].image_link + '">' +
-//       '</div>' +
-//       '<div class="card-content">' +
-//         '<span class="card-title activator grey-text text-darken-4">' + data[i].name + '<i class="material-icons right">more_vert</i></span>' +
-//         '<p><a href="#">' + data[i].website_link +'</a></p>' +
-//       '</div>' +
-//     '<div class="card-reveal">' +
-//       '<span class="card-title grey-text text-darken-4"> ' + '$' + data[i].price + '<br>' + 'review: ' + rating + '/5' + '<br>' + data[i].brand + '<i class="material-icons right">close</i></span>' +
-//       '<p>' + '<br>'+ 'Description: ' + data[i].description + '<br>' +  '</p>' +
-//       '</div></div>' +
-//     '</div>')
-//
-// }
-// })
-
-
-// })
-
-// $(document).ready(function() {
-// $('#card-reveal').append(("<p> </p>").text(data[i].name)
-
-// $('div.card-reveal').append('<p>' + data[i].brand + '</p>')
-// $('div.card-reveal').append('<p>' + data[i].price + '</p>')
-// $('div.card-reveal').append('<p>' + data[i].product_type + '</p>')
-// $('div.card-reveal').append('<p>' + data[i].product_link +  '</p>')
-// }
-
-
-
-
-//
-//
-// // initialize
-// $('select').material_select();
-//
-//
-// $("#myButton").click(function() {
-//
-//   // clear contents
-//   var $selectDropdown =
-//     $("#dropdownid")
-//       .empty()
-//       .html(' ');
-//
-//   // add new value
-//   var value = "some value";
-//   $selectDropdown.append(
-//     $("<option></option>")
-//       .attr("value",value)
-//       .text(value)
-//   );
-//
-//   // trigger event
-//   $selectDropdown.trigger('contentChanged');
-// });
-//
-//
-// $('select').on('contentChanged', function() {
-//   // re-initialize (update)
-//   $(this).material_select();
-// });
-
-// });
 $(document).ready(function(){
       $('.carousel').carousel();
     });

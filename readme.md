@@ -15,4 +15,4 @@ Built with:
 
 ---
 Video:
-Coming soon
+https://www.youtube.com/watch?v=NRSyshhyJM0

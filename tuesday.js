@@ -9,10 +9,10 @@ const proxy = 'https://cors-anywhere.herokuapp.com/'
 const button = document.getElementsByTagName('button')[0]
 let currentPage = 1
 const limit = 30
+const totalRating = '/5'
 
 addPagination()
 button.addEventListener('click', getMakeup)
-
 
 function addPagination() {
   lis = document.querySelectorAll('li')
@@ -22,9 +22,8 @@ function addPagination() {
 }
 
 function removeCurrentLi() {
-  for (var i = 0; i < lis.length; i++) {
-    lis[i].classList.remove('current')
-  }
+  let newLi = lis.filter(li => lis.length)
+
 }
 
 function handlePagination() {
@@ -48,39 +47,34 @@ function addNewLi(page) {
 
 function getMakeup(event) {
   // document.querySelector('.pagination').style.display = 'block'
-  console.log('Clicked');
   if (event) {
     event.preventDefault()
   }
   let type = document.getElementsByTagName('input')[0].value
   let brand =$("#brandDropdown option:selected").val()
   let lessThan = $("#priceDropdown option:selected").val()
-  console.log(brand)
   let offset = (currentPage * limit) - limit
   fetch(proxy + baseURL + `?product_type=${type}` + `&brand=${brand}`
     + `&price_less_than=${lessThan}`
     + `&limit=30` + `&page=${currentPage}` + `&offset=${offset}`
   )
-    .then(data => data.json()) //turns it into json
+    .then(data => data.json())
     .then(handleMakeup)
 
     function handleMakeup(response) {
       let mainContent = document.querySelector('.main-content')
       mainContent.innerHTML = ''
-      console.log(response);
       for (var i = 0; i < response.length; i++) {
         createCard(response[i])
       }
     }
-//
 }
-//
-//
+
 function createCard(makeup) {
     if (makeup.rating === null) {
       var rating = 'Not Available';
     } else {
-      var rating = makeup.rating + '/5';
+      var rating = makeup.rating + totalRating;
     }
     if (makeup.price === null) {
       var price = 'Not Available';

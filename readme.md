@@ -11,13 +11,13 @@ Use any combination of the three search features to search and buy your favorite
 Running Tests: 
 The results will populate below the search bars once you make a selection. 
 
-![screen shot 2017-06-30 at 9 37 15 am](https://user-images.githubusercontent.com/28164171/27743090-1c14091c-5d78-11e7-9b8e-a44858123be1.png)
+![screen shot 2017-10-06 at 1 36 30 pm](https://user-images.githubusercontent.com/28164171/31295358-91b24ccc-aa9b-11e7-9745-5711efc94a68.png)
 
 ---
 Built with:
 * Materialize - the CSS framework used http://materializecss.com/
 * Fontawesome- the font framework used http://fontawesome.io
-* Make up api - the make up API used http://makeup-api.herokuapp.com/
+* Make up api 
 * jquery
 * CSS
 * html

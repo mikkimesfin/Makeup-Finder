@@ -18,7 +18,11 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
-
+.search {
+	display: block;
+	width: 50%;
+	background-color: white !important
+}
 nav {
 	background-color: #c33c54 !important
 }
@@ -32,10 +36,11 @@ button {
 		display: block;
 	}
 .card{
-	background-color: #c33c54; !important
+	background-color: #c33c54 !important
 }
 	body {
 		line-height: 1;
+		background-color: white !important
 	}
 
 	ol, ul {

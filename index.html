@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Q1 Project: My Makeup App</title>
@@ -9,81 +8,70 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.0/css/foundation.min.css">
   <link rel="stylesheet" href="tuesday.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 </head>
-
 <body>
-
-
   <header>
     <nav>
-       <div class="nav-wrapper">
-
-         <a href="#" class="brand-logo center">The Makeup Bag</a>
-         <ul id="nav-mobile" class="right hide-on-med-and-down">
-           <li><a href="#">Shopping Cart</a></li>
-
-         </ul>
-         <a class= "center">Free 3-day shipping over $50</a>
-       </div>
-     </nav>
-<br>
-
-<div class="carousel">
-   <a class="carousel-item" href="#one!"><img src="http://www.sephora.com/productimages/sku/s1956382-main-Lhero.jpg" width ></a>
-   <a class="carousel-item" href="#two!"><img src="http://www.sephora.com/productimages/sku/s1954106-main-Lhero.jpg"></a>
-   <a class="carousel-item" href="#three!"><img src="http://www.sephora.com/productimages/sku/s1726058-main-Lhero.jpg"></a>
-   <a class="carousel-item" href="#four!"><img src="http://www.sephora.com/productimages/sku/s1573336-main-Lhero.jpg"></a>
-   <a class="carousel-item" href="#five!"><img src="http://www.sephora.com/productimages/sku/s1894997-main-Lhero.jpg"></a>
- </div>
-
-
-
-<p> Search by makeup brand, or type, or price range </p>
-
-    <form>
-      <h1>Enter Makeup Type</h1>
-      <input type="text" placeholder="lipstick">
-      <h1> Choose a Brand </h1>
-      <select class="dropdown" id= "brandDropdown" name="">
-        <option value="">All brands</option>
-        <option value="maybelline">Maybelline</option>
-        <option value="almay">Almay</option>
-        <option value="essie">Essie</option>
-        <option value="pacifica">Pacifica</option>
-        <option value="iman">Iman</option>
-        <option value="nyx">NYX</option>
-        <option value="elf">Elf</option>
-        <option value="smashbox">Smashbox</option>
-        <option value="benefit">Benefit</option>
-        <option value="covergirl">Covergirl</option>
-        <option value="stila">Stila</option>
-        <option value="revlon">Revlon</option>
-        <option value="milani">Milani</option>
-      </select>
-      <h1>Choose a Price Range </h1>
-      <select class="dropdown2" id="priceDropdown" name="">
-        <option value="">Any Price</option>
-        <option value="50">less than $50</option>
-        <option value="25">less than $25</option>
-        <option value="10">less than $10</option>
-        <option value="5">less than $5</option>
-      </select>
-      <button class="button" type="submit"> Search </button>
-    </form>
-
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">The Makeup Bag</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Shopping Cart</a></li>
+        </ul>
+        <a class="center">Free 3-day shipping</a>
+      </div>
+    </nav>
   </header>
-
-
-  <main>
-
-    <div class="row container main-content">
-
+  <br>
+  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="http://www.sephora.com/productimages/sku/s1956382-main-Lhero.jpg" width ></a>
+    <a class="carousel-item" href="#two!"><img src="http://www.sephora.com/productimages/sku/s1954106-main-Lhero.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="http://www.sephora.com/productimages/sku/s1726058-main-Lhero.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="http://www.sephora.com/productimages/sku/s1573336-main-Lhero.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="http://www.sephora.com/productimages/sku/s1894997-main-Lhero.jpg"></a>
+  </div>
+  <p> Search by makeup brand, or type, or price range </p>
+  <form>
+    <div class="row container">
+      <div class="container search">
+        <h1>Enter Makeup Type</h1>
+        <input type="text" placeholder="Type here to search">
+      </div>
+      <div class="container">
+        <h1> Choose a Brand </h1>
+        <select class="dropdown" id="brandDropdown" name="">
+              <option value="">Choose Brand from Dropdown</option>
+              <option value="maybelline">Maybelline</option>
+              <option value="almay">Almay</option>
+              <option value="essie">Essie</option>
+              <option value="pacifica">Pacifica</option>
+              <option value="iman">Iman</option>
+              <option value="nyx">NYX</option>
+              <option value="elf">Elf</option>
+              <option value="smashbox">Smashbox</option>
+              <option value="benefit">Benefit</option>
+              <option value="covergirl">Covergirl</option>
+              <option value="stila">Stila</option>
+              <option value="revlon">Revlon</option>
+              <option value="milani">Milani</option>
+            </select>
+      </div>
+      <div class="container">
+        <h1>Choose a Price Range </h1>
+        <select class="dropdown2" id="priceDropdown" name="">
+      <option value=""> Choose a Price Range from Dropdown</option>
+      <option value="50">less than $50</option>
+      <option value="25">less than $25</option>
+      <option value="10">less than $10</option>
+      <option value="5">less than $5</option>
+    </select>
+        <button class="button" type="submit"> Search </button>
+      </div>
     </div>
-
+  </form>
+  <main>
+    <div class="row container main-content">
+    </div>
   </main>
-
-
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="tuesday.js" charset="utf-8"></script>
